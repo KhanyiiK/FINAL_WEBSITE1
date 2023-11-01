@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css files/api.css" />
+        <link rel="stylesheet" href="/css files/api.css" />
+        <script
+         src="https://kit.fontawesome.com/85c4a0174a.js" crossorigin="anonymous"
+       ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <title>STATIC DATA</title>
+</head>
+<body>
+
+<!-- header -->
+<header>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">STATIC DATA</a>
+      <div class="navbar-nav">
+        <ul>
+          <li><a href="/index.html">Homepage</a></li>
+          <li><a href="/html files/AsteroidData.html">Aestroid Data</a></li>
+          <li><a href="/html files/interactiveData.html">Interactive Data</a></li>
+          <li><a href="/html files/dataArt.html">Data Art</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="banner">
+    <div class="container">
+      <h1 class="banner-title">
+        <span>STATIC</span>DATA
+      </h1>
+      <p><b>This section showcases the static data visualizations associated with my API.</b></p>
+    </div>
+  </div>
+</header>
+<!-- end of header -->
+
+        <section class="charts-container">
+            <div class="chart">
+              <input type="date" id="dateInput" name="dateInput" value="2023-09-01" />
+            <button id="loadData">Load Static Asteroids Data</button>
+            <div id="output"></div>
+                <h3>Comparing Asteroid Diameters with Names in a Bar Chart</h3>
+                <p>
+                    The bar chart visually shows asteroid diameters in meters with their names. 
+                    The x-axis spans from 0 to the total asteroid count for the selected date. 
+                    Each asteroid's name is on the y-axis, and the bar length represents its diameter. 
+                    This chart simplifies comparing asteroid sizes for users.
+                </p>
+              <div id="diameterChart"></div>
+              <div class="chart-info" id="diameterChartInfo">
+              </div>
+            </div>
+    
+            <div class="chart">
+                <h3>Comparing Asteroid Distances from Earth in a Scatterplot Chart</h3>
+                <p>
+                    This scatterplot chart illustrates asteroid distances from Earth in megameters, with each asteroid's 
+                    name on the x-axis. The x-axis spans from 0 to the total number of asteroids for the chosen date, while 
+                    the y-axis represents the distance from Earth. Users can easily see how asteroids are distributed in 
+                    terms of their Earth distances. This chart helps users identify closer or more distant asteroids on 
+                    the selected date.
+                </p>
+              <div id="distanceChart"></div>
+              <div class="chart-info" id="distanceChartInfo">
+              </div>
+            </div>
+
+            <script src="/js files/api.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
